@@ -1,10 +1,8 @@
 from django.db import models
+from .Ask import Ask
 
 class Poll(models.Model):
-    """Model definition for Poll."""
-
-    # TODO: Define fields here
-
+    asks = models.ManyToManyField(Ask)
     class Meta:
         """Meta definition for Poll."""
 

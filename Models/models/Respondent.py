@@ -1,10 +1,8 @@
 from django.db import models
+from .Poll import Poll
 
 class Respondent(models.Model):
-    """Model definition for Respondent."""
-
-    # TODO: Define fields here
-
+    polls = models.ManyToManyField(Poll)
     class Meta:
         """Meta definition for Respondent."""
 
