@@ -6,7 +6,7 @@ class Variable(models.Model):
     description = models.TextField(default='')
     name = models.CharField(max_length=128, default='')
     dimensions = models.ManyToManyField(Dimension)
-    scale = models.OneToOneField(Scale, on_delete=models.CASCADE, parent_link=True)
+    scale = models.OneToOneField(Scale, on_delete=models.CASCADE, parent_link=True, null=True)
     class Meta:
         """Meta definition for Variable."""
 

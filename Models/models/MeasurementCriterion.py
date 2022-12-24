@@ -4,7 +4,7 @@ from .Indicator import Indicator
 class MeasurementCriterion(models.Model):
     description = models.TextField(default='')
     value = models.IntegerField(default=0)
-    indicator = models.ForeignKey(Indicator, on_delete=models.CASCADE)
+    indicator = models.ForeignKey(Indicator, on_delete=models.CASCADE, null=True)
     class Meta:
         """Meta definition for MeasurementCriterion."""
         verbose_name = 'MeasurementCriterion'

@@ -6,7 +6,7 @@ class Dimension(models.Model):
     description = models.TextField(default='')
     weigh = models.IntegerField(default=0)
     indicators = models.ManyToManyField(Indicator)
-    scale = models.OneToOneField(Scale, on_delete=models.CASCADE, parent_link=True)
+    scale = models.OneToOneField(Scale, on_delete=models.CASCADE, parent_link=True, null=True)
     class Meta:
         """Meta definition for Dimension."""
 

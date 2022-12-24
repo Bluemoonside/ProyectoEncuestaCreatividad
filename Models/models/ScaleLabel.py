@@ -4,7 +4,7 @@ from .Scale import Scale
 class ScaleLabel(models.Model):
     description = models.TextField(default='')
     name = models.CharField(max_length=128, default='')
-    scale = models.OneToOneField(Scale, on_delete=models.CASCADE, parent_link=True)
+    scale = models.OneToOneField(Scale, on_delete=models.CASCADE, parent_link=True,null=True)
     class Meta:
         """Meta definition for ScaleLabel."""
 
