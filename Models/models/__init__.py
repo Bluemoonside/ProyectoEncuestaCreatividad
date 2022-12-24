@@ -1,4 +1,4 @@
-from .Ask import Ask
+from .Question import Question
 from .Dimension import Dimension
 from .Indicator import Indicator
 from .MeasurementCriterion import MeasurementCriterion
