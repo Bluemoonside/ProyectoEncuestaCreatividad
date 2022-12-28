@@ -1,0 +1,38 @@
+{% extends "./base.html" %}
+{% block body %}
+<div class="row">
+    
+    <div class="col-md-6 col-lg-8 col-xl-8 col-sm-12">
+           <h1>
+            Listado de criterios de medidas
+           </h1> 
+           <div class="table-responsive py-4">
+            <table class="table table-striped">
+               <thead>
+                   <tr>
+                    <th>Descripcion</th>
+                    <th>Valor</th>
+                    <th>Indicador</th>
+                    <th colspan="2">Opciones</th>
+                   </tr>
+               </thead>   
+                <tbody>
+                    {% if object_list %}
+                    {% for c in object_list %}
+                    <tr>
+                       <td>{{c.description}}</td>
+                       <td>{{c.value}}</td>
+                       <td>{{c.indicator}}</td>
+                       <td><a href="editarCriterio/{{c.codigo}}"class="btn btn-info" >Editar</a></td>
+                       <td><a href="eliminarCriterio/{{c.codigo}}"class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                   {% endfor %}
+                   {% else %}
+                   <h1>No hay criterios de medida.</h1>
+                    {% endif %}
+                </tbody>
+            </table>
+           </div>      
+    </div>
+</div>
+{% endblock %}

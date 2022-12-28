@@ -5,4 +5,4 @@ from Models.models.MeasurementCriterion import MeasurementCriterion
 class MeasurementCriterionForm(ModelForm):
     class Meta:
         model = MeasurementCriterion
-        fields = '__all__'
+        fields = ['description','value','indicator']
