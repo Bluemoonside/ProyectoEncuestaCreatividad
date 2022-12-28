@@ -8,5 +8,5 @@ from Metrics import forms
 # creacion de la vista generica para listar MeasurementCriterion
 class MeasurementCriterionListView(ListView):
     model =MeasurementCriterion
-    template_name = "listarCriterioMedida.html"
-    
+    template_name = "listMeasurementCriterion.html"
+ 
