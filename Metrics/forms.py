@@ -6,3 +6,9 @@ class MeasurementCriterionForm(ModelForm):
     class Meta:
         model = MeasurementCriterion
         fields = ['description','value','indicator']
+
+# formulario para Indicator
+class IndicatorForm(ModelForm):
+    class Meta:
+        model = Indicator
+        fields = ['description', 'weigh', 'scale']
