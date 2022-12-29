@@ -23,8 +23,8 @@
                        <td>{{c.description}}</td>
                        <td>{{c.value}}</td>
                        <td>{{c.indicator}}</td>
-                       <td><a href="editarCriterio/{{c.codigo}}"class="btn btn-info" >Editar</a></td>
-                       <td><a href="eliminarCriterio/{{c.codigo}}"class="btn btn-danger">Eliminar</a></td>
+                       <td><a href="updateMeasurementCriterion/{{c.pk}}"class="btn btn-info" >Editar</a></td>
+                       <td><a href="deleteMeasurementCriterion/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
                     </tr>
                    {% endfor %}
                    {% else %}
@@ -34,5 +34,8 @@
             </table>
            </div>      
     </div>
+</div>
+<div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+    <a href="createdMeasurementCriterion/"class="btn btn-success">Crear Nuevo Criterio</a>
 </div>
 {% endblock %}

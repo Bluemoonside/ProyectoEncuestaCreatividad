@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from Models.models.MeasurementCriterion import MeasurementCriterion
+from Models.models import MeasurementCriterion,Indicator,Dimension,Variable
 
 # formulario para MeasurementCriterion
 class MeasurementCriterionForm(ModelForm):
