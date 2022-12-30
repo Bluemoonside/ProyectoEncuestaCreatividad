@@ -1,0 +1,10 @@
+{% extends "./pollbase.html" %}
+
+{% block tittle %} Eliminar Encuesta {% endblock %}
+
+{% block body %}
+<form method="POST">{% csrf_token %}
+    <h3><Strong>Desea Eliminar el Encuesta {{ object.id }}</Strong></h3>
+    <button class="btn bg-danger" type="submit">S&iacute;, Eliminar</button>
+    <a class="btn btn-dark" href="/poll/polllist/">No, Gracias</a>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "./pollbase.html" %}
+
+{% block tittle %} Listar Encuesta {% endblock %}
+
+{% block body %}
+<div class="row">
+    
+    <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+           <h1>
+            Listado de Encuestas
+           </h1> 
+           <div class="table-responsive py-4">
+            <table class="table table-striped">
+               <thead>
+                   <tr>
+                    <th>Titulo</th>
+                    <th colspan="2">Opciones</th>
+                   </tr>
+               </thead>   
+                <tbody>
+                    {% if object_list %}
+                    {% for c in object_list %}
+                    <tr>
+                       <td>{{c}}</td>
+                       <td><a href="updatepoll/{{c.pk}}"class="btn btn-info" >Editar</a></td>
+                       <td><a href="deletepoll/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                   {% endfor %}
+                   {% else %}
+                   <h1>No hay Encuestas.</h1>
+                    {% endif %}
+                </tbody>
+            </table>
+           </div>      
+    </div>
+</div>
+<div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+    <a href="/poll/createpoll/"class="btn btn-success">Crear Nueva Encuesta</a>
+    <a class="btn btn-primary" href="#">Regresar</a>
+</div>
+{% endblock %}

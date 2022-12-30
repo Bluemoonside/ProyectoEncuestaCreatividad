@@ -1,0 +1,49 @@
+{% extends "./pollbase.html" %}
+
+{% block tittle %} Listar Preguntas {% endblock %}
+
+{% block body %}
+<div class="row">
+    
+    <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+           <h1>
+            Listado de Preguntas
+           </h1> 
+           <div class="table-responsive py-4">
+            <table class="table table-striped">
+               <thead>
+                   <tr>
+                    <th>#</th>
+                    <th>Texto de la pregunta</th>
+                    <th>Fecha de publicaci&oacute;n</th>
+                    <th>Tipo</th>
+                    <th>Criterio de Medida</th>
+                    <th colspan="2">Opciones</th>
+                   </tr>
+               </thead>   
+                <tbody>
+                    {% if object_list %}
+                    {% for c in object_list %}
+                    <tr>
+                       <td>{{c.id}}</td>
+                       <td>{{c.question_text}}</td>
+                       <td>{{c.pub_date}}</td>
+                       <td>{{c.type}}</td>
+                       <td>{{c.measurement_criterion}}</td>
+                       <td><a href="updatequestion/{{c.pk}}"class="btn btn-info" >Editar</a></td>
+                       <td><a href="deletequestion/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                   {% endfor %}
+                   {% else %}
+                   <h1>No hay Preguntas.</h1>
+                    {% endif %}
+                </tbody>
+            </table>
+           </div>      
+    </div>
+</div>
+<div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+    <a href="/poll/createquestion/" class="btn btn-success">Crear Nueva Pregunta</a>
+    <a class="btn btn-dark" href="/poll/createpoll/">Regresar</a>
+</div>
+{% endblock %}
