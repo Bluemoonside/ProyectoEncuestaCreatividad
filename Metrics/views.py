@@ -6,11 +6,11 @@ from Metrics import forms
 # Create your views here.
 #Metodos para direccionar a las difrerntes gestiones de tablas
 def Indicators(request):
-    return redirect('/Metrics/listIndicator/')
+    return redirect('/metrics/indicators/')
 def MeasurementCriterions(request):
-    return redirect('/Metrics/listMeasurementCriterion/')
+    return redirect('/metrics/measurementcriterions/')
 def Dimensions(request):
-    return redirect('/Metrics/listDimension/')
+    return redirect('/metrics/dimensions/')
 
 # creacion de la vista generica para listar MeasurementCriterion
 class MeasurementCriterionListView(ListView):

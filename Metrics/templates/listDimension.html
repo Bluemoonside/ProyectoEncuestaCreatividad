@@ -21,12 +21,12 @@
                     {% if object_list %}
                     {% for c in object_list %}
                     <tr>
-                        <td>{{c.pk}}</td>
+                       <td>{{c.pk}}</td>
                        <td>{{c.description}}</td>
                        <td>{{c.weigh}}</td>
                        <td>{{c.indicators}}</td>
-                       <td><a href="updateDimension/{{c.pk}}"class="btn btn-info" >Editar</a></td>
-                       <td><a href="deleteDimension/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
+                       <td><a href="update/{{c.pk}}"class="btn btn-info" >Editar</a></td>
+                       <td><a href="delete/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
                     </tr>
                    {% endfor %}
                    {% else %}
@@ -38,6 +38,6 @@
     </div>
 </div>
 <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-    <a href="createdDimension/"class="btn btn-success">Crear Nueva Dimension</a>
+    <a href="created/"class="btn btn-success">Crear Nueva Dimension</a>
 </div>
 {% endblock %}
