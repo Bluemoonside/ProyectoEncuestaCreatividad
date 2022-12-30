@@ -14,6 +14,7 @@
                <thead>
                    <tr>
                     <th>#</th>
+                    <th>Titulo</th>
                     <th>Texto de la pregunta</th>
                     <th>Fecha de publicaci&oacute;n</th>
                     <th>Tipo</th>
@@ -26,6 +27,7 @@
                     {% for c in object_list %}
                     <tr>
                        <td>{{c.id}}</td>
+                       <td>{{c.tittle}}</td>
                        <td>{{c.question_text}}</td>
                        <td>{{c.pub_date}}</td>
                        <td>{{c.type}}</td>
