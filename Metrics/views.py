@@ -4,11 +4,13 @@ from django.views.generic import CreateView ,ListView,UpdateView,DeleteView
 from Models import models 
 from Metrics import forms
 # Create your views here.
-#Metodos para direccionar a las difrerntes grstiones de tablas
+#Metodos para direccionar a las difrerntes gestiones de tablas
 def Indicators(request):
     return redirect('/Metrics/listIndicator/')
 def MeasurementCriterions(request):
     return redirect('/Metrics/listMeasurementCriterion/')
+def Dimensions(request):
+    return redirect('/Metrics/listDimension/')
 
 # creacion de la vista generica para listar MeasurementCriterion
 class MeasurementCriterionListView(ListView):
@@ -59,3 +61,29 @@ class IndicatorDeleteView(DeleteView):
     model = models.Indicator
     template_name = "deleteIndicator.html"
     success_url= reverse_lazy('listar_indicator')
+    
+#--------------------------------------------------------------------------------------------
+# creacion de la vista generica para listar Dimension
+class DimensionListView(ListView):
+    model =models.Dimension
+    template_name = "listDimension.html"
+ 
+# creacion de la vista generica para crear Dimension
+class DimensionCreateView(CreateView):
+    model =models.Dimension
+    form_class =forms.DimensionForm
+    template_name = "createdDimension.html"
+    success_url= reverse_lazy('listar_dimension')
+    
+# creacion de la vista generica para editar Dimension
+class DimensionUpdateView(UpdateView):
+    model = models.Dimension
+    form_class =forms.DimensionForm
+    template_name = "updateDimension.html"
+    success_url= reverse_lazy('listar_dimension')
+
+# creacion de la vista generica para eliminar Dimension
+class DimensionDeleteView(DeleteView):
+    model = models.Dimension
+    template_name = "deleteDimension.html"
+    success_url= reverse_lazy('listar_dimension')

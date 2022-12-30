@@ -12,3 +12,9 @@ class IndicatorForm(ModelForm):
     class Meta:
         model = Indicator
         fields = ['description', 'weigh', 'scale']
+
+# formulario para Dimension
+class DimensionForm(ModelForm):
+    class Meta:
+        model = Dimension
+        fields = ['description', 'indicators','weigh', 'scale']

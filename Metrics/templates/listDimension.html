@@ -1,0 +1,43 @@
+{% extends "./base.html" %}
+{% block body %}
+<div class="row">
+    
+    <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+           <h1>
+            Listado de Dimensiones.
+           </h1> 
+           <div class="table-responsive py-4">
+            <table class="table table-striped">
+               <thead>
+                   <tr>
+                    <th>#</th>
+                    <th>Descripcion</th>
+                    <th>Peso</th>
+                    <th>Indicadores</th>
+                    <th colspan="2">Opciones</th>
+                   </tr>
+               </thead>   
+                <tbody>
+                    {% if object_list %}
+                    {% for c in object_list %}
+                    <tr>
+                        <td>{{c.pk}}</td>
+                       <td>{{c.description}}</td>
+                       <td>{{c.weigh}}</td>
+                       <td>{{c.indicators}}</td>
+                       <td><a href="updateDimension/{{c.pk}}"class="btn btn-info" >Editar</a></td>
+                       <td><a href="deleteDimension/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                   {% endfor %}
+                   {% else %}
+                   <h1>No hay Dimensiones.</h1>
+                    {% endif %}
+                </tbody>
+            </table>
+           </div>      
+    </div>
+</div>
+<div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+    <a href="createdDimension/"class="btn btn-success">Crear Nueva Dimension</a>
+</div>
+{% endblock %}
