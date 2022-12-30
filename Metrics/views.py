@@ -11,6 +11,9 @@ def MeasurementCriterions(request):
     return redirect('/metrics/measurementcriterions/')
 def Dimensions(request):
     return redirect('/metrics/dimensions/')
+def Variables(request):
+    return redirect('/metrics/variables/')
+
 
 # creacion de la vista generica para listar MeasurementCriterion
 class MeasurementCriterionListView(ListView):
@@ -62,7 +65,6 @@ class IndicatorDeleteView(DeleteView):
     template_name = "deleteIndicator.html"
     success_url= reverse_lazy('listar_indicator')
     
-#--------------------------------------------------------------------------------------------
 # creacion de la vista generica para listar Dimension
 class DimensionListView(ListView):
     model =models.Dimension
@@ -87,3 +89,29 @@ class DimensionDeleteView(DeleteView):
     model = models.Dimension
     template_name = "deleteDimension.html"
     success_url= reverse_lazy('listar_dimension')
+    
+
+class VariableListView(ListView):
+    model =models.Variable
+    template_name = "listVariable.html"
+ 
+# creacion de la vista generica para crear Variable
+class VariableCreateView(CreateView):
+    model =models.Variable
+    form_class =forms.VariableForm
+    template_name = "createdVariable.html"
+    success_url= reverse_lazy('listar_variable')
+    
+# creacion de la vista generica para editar Variable
+class VariableUpdateView(UpdateView):
+    model = models.Variable
+    form_class =forms.VariableForm
+    template_name = "updateVariable.html"
+    success_url= reverse_lazy('listar_variable')
+
+# creacion de la vista generica para eliminar Variable
+class VariableDeleteView(DeleteView):
+    model = models.Variable
+    template_name = "deleteVariable.html"
+    success_url= reverse_lazy('listar_variable')
+    

@@ -31,5 +31,17 @@ class DimensionForm(ModelForm):
         widgets={
             'description':forms.Textarea(attrs={'class':'form-control'}),
             'weigh': forms.NumberInput(attrs={'class':'form-control'}),
-            'indicators':forms.Select(attrs={'class':'form-control'})
+            'indicators':forms.SelectMultiple(attrs={'class':'form-control'})
         }
+        
+# formulario para Variable
+class VariableForm(ModelForm):
+    class Meta:
+        model = Variable
+        fields = ['description','name', 'dimensions', 'scale'] 
+        widgets={
+            'description':forms.Textarea(attrs={'class':'form-control'}),
+            'name':forms.TextInput(attrs={'class':'form-control'}),
+            'dimensions':forms.SelectMultiple(attrs={'class':'form-control'})
+        }
+               
