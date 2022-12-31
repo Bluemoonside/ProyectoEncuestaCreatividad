@@ -10,6 +10,7 @@
             <table class="table table-striped">
                <thead>
                    <tr>
+                    <th>#</th>
                     <th>Descripcion</th>
                     <th>Valor</th>
                     <th>Indicador</th>
@@ -20,11 +21,12 @@
                     {% if object_list %}
                     {% for c in object_list %}
                     <tr>
+                       <td>{{c.pk}}</td>
                        <td>{{c.description}}</td>
                        <td>{{c.value}}</td>
-                       <td>{{c.indicator}}</td>
-                       <td><a href="updateMeasurementCriterion/{{c.pk}}"class="btn btn-info" >Editar</a></td>
-                       <td><a href="deleteMeasurementCriterion/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
+                       <td>{{c.indicator.description}}</td>
+                       <td><a href="update/{{c.pk}}"class="btn btn-info" >Editar</a></td>
+                       <td><a href="delete/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
                     </tr>
                    {% endfor %}
                    {% else %}
@@ -36,6 +38,6 @@
     </div>
 </div>
 <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-    <a href="createdMeasurementCriterion/"class="btn btn-success">Crear Nuevo Criterio</a>
+    <a href="created/"class="btn btn-success">Crear Nuevo Criterio</a>
 </div>
 {% endblock %}

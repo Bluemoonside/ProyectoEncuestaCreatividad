@@ -1,0 +1,9 @@
+{% extends "./base.html" %}
+{% block body %}
+<form method="post"> {% csrf_token %}
+    <h1>Esta seguro que desea eliminar el Dimension ( {{object.description}})</h1>
+    <button class="btn btn-danger" type="submit">Eliminar</button>
+    <a href="{% url 'listar_criterio' %}" class="btn btn-success">Cancelar</a>
+</form>
+
+{% endblock %}
