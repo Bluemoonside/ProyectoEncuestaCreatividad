@@ -83,4 +83,4 @@ class ScaleUpdateView(UpdateView):
 class ScaleDeleteView(DeleteView):
     model = models.Scale
     template_name = "deleteScale.html"
-    success_url= reverse_lazy('listar_indicator')
+    success_url= reverse_lazy('listar_scale')

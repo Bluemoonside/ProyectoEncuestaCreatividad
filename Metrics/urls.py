@@ -25,8 +25,8 @@ urlpatterns = [
       path('listIndicator/updateIndicator/<pk>', IndicatorUpdateView.as_view() ),
       path('listIndicator/deleteIndicator/<pk>', IndicatorDeleteView.as_view() ), 
       # URL para Scale
-      path('listscale/', ScaleListView.as_view(),name='listar_scale'  ),
-      path('listscale/createdscale/', ScaleCreateView.as_view() ),
-      path('listscale/updatescale/<pk>', ScaleUpdateView.as_view() ),
-      path('listscale/deletescale/<pk>', ScaleDeleteView.as_view() ), 
+      path('scale/list/', ScaleListView.as_view(),name='listar_scale'  ),
+      path('scale/list/scale/create/', ScaleCreateView.as_view() ),
+      path('scale/list/scale/update/<pk>', ScaleUpdateView.as_view() ),
+      path('scale/list/scale/delete/<pk>', ScaleDeleteView.as_view() ), 
 ]
