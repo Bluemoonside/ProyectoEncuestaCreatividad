@@ -13,7 +13,8 @@
             <table class="table table-striped">
                <thead>
                    <tr>
-                    <th>Titulo</th>
+                    <th>Encuesta</th>
+                    <th>Nombre</th>
                     <th colspan="2">Opciones</th>
                    </tr>
                </thead>   
@@ -22,6 +23,7 @@
                     {% for c in object_list %}
                     <tr>
                        <td>{{c}}</td>
+                       <td>{{c.name}}</td>
                        <td><a href="updatepoll/{{c.pk}}"class="btn btn-info" >Editar</a></td>
                        <td><a href="deletepoll/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
                     </tr>
