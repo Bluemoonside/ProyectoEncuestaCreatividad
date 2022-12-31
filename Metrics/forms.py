@@ -1,14 +1,40 @@
-from django.forms import ModelForm
-from Models.models import MeasurementCriterion,Indicator,Dimension,Variable
+from django import forms
+from Models.models import MeasurementCriterion,Indicator,Dimension,Variable,Scale
 
 # formulario para MeasurementCriterion
-class MeasurementCriterionForm(ModelForm):
+class MeasurementCriterionForm(forms.ModelForm):
     class Meta:
         model = MeasurementCriterion
         fields = ['description','value','indicator']
 
 # formulario para Indicator
-class IndicatorForm(ModelForm):
+class IndicatorForm(forms.ModelForm):
     class Meta:
         model = Indicator
-        fields = ['description', 'weigh', 'scale']
+        fields = ['description', 'weigh', 'scale']  
+
+# formulario para Scale
+class ScaleForm(forms.ModelForm):
+	class Meta:
+		model = Scale
+		fields =[
+			'description',
+			'name',
+			'max_value',
+			'min_value',
+			'interval',
+		]
+		labels = {
+			'description': 'Description',
+			'name': 'Nombre',
+			'max_value': 'Valor Máximo',
+			'min_value': 'Valor Mínimo',
+			'interval': 'Intervalo',
+		} 
+		widgets = {
+			'description': forms.TextInput(attrs={'class':'form-control'}),
+			'name': forms.TextInput(attrs={'class':'form-control'}),
+			'max_value': forms.NumberInput(),
+			'min_value': forms.NumberInput(),
+			'interval': forms.NumberInput(),    
+		}

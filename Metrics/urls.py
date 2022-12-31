@@ -1,9 +1,5 @@
 from django.urls import path, include
-from .views import  (Indicators,MeasurementCriterions,
-                     MeasurementCriterionListView ,MeasurementCriterionCreateView,
-                     MeasurementCriterionUpdateView,MeasurementCriterionDeleteView,
-                     IndicatorListView ,IndicatorCreateView,
-                     IndicatorUpdateView,IndicatorDeleteView,)
+from .views import *
 
 urlpatterns = [
       #URL ara direccionar a las difrerntes grstiones de tablas
@@ -27,5 +23,10 @@ urlpatterns = [
       path('listIndicator/', IndicatorListView.as_view(),name='listar_indicator'  ),
       path('listIndicator/createdIndicator/', IndicatorCreateView.as_view() ),
       path('listIndicator/updateIndicator/<pk>', IndicatorUpdateView.as_view() ),
-      path('listIndicator/deleteIndicator/<pk>', IndicatorDeleteView.as_view() ),
+      path('listIndicator/deleteIndicator/<pk>', IndicatorDeleteView.as_view() ), 
+      # URL para Scale
+      path('listscale/', ScaleListView.as_view(),name='listar_scale'  ),
+      path('listscale/createdscale/', ScaleCreateView.as_view() ),
+      path('listscale/updatescale/<pk>', ScaleUpdateView.as_view() ),
+      path('listscale/deletescale/<pk>', ScaleDeleteView.as_view() ), 
 ]
