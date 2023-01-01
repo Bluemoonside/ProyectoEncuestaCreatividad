@@ -32,8 +32,8 @@
                        <td>{{c.pub_date}}</td>
                        <td>{{c.type}}</td>
                        <td>{{c.measurement_criterion}}</td>
-                       <td><a href="updatequestion/{{c.pk}}"class="btn btn-info" >Editar</a></td>
-                       <td><a href="deletequestion/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
+                       <td><a href="update/question/{{c.pk}}"class="btn btn-info" >Editar</a></td>
+                       <td><a href="delete/question/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
                     </tr>
                    {% endfor %}
                    {% else %}
@@ -45,7 +45,7 @@
     </div>
 </div>
 <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-    <a href="/poll/createquestion/" class="btn btn-success">Crear Nueva Pregunta</a>
-    <a class="btn btn-dark" href="/poll/createpoll/">Regresar</a>
+    <a href="/poll/create/question/" class="btn btn-success">Crear Nueva Pregunta</a>
+    <a class="btn btn-dark" href="/poll/create/poll/">Regresar</a>
 </div>
 {% endblock %}

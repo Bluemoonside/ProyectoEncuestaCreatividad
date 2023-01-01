@@ -58,7 +58,7 @@ ROOT_URLCONF = 'ProyectoEncuestaCreatividad.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['ProyectoEncuestaCreatividad/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
