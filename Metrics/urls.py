@@ -2,7 +2,7 @@ from django.urls import path, include
 from .views import *
 
 urlpatterns = [
-      #URL ara direccionar a las difrerntes grstiones de tablas
+      #URL para hacer funcionar el narbar
       path('measurementcriterions/measurementcriterions/', MeasurementCriterions),     
       path('indicators/measurementcriterions/', MeasurementCriterions),
       path('indicators/created/measurementcriterions/', MeasurementCriterions  ),
