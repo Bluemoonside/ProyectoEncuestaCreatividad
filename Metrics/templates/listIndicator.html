@@ -13,6 +13,7 @@
                     <th>#</th>
                     <th>Descripcion</th>
                     <th>Peso</th>
+                    <th>Dimensiones a las que perstenece</th>
                     <th colspan="2">Opciones</th>
                    </tr>
                </thead>   
@@ -23,7 +24,7 @@
                        <td>{{c.pk}}</td>
                        <td>{{c.description}}</td>
                        <td>{{c.weigh}}</td>
-                       <td>{{c.indicator}}</td>
+                       <td>{{c.dimensions}}</td>
                        <td><a href="update/{{c.pk}}"class="btn btn-info" >Editar</a></td>
                        <td><a href="delete/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
                     </tr>
