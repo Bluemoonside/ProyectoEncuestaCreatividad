@@ -16,22 +16,39 @@ class MeasurementCriterionForm(forms.ModelForm):
 class IndicatorForm(forms.ModelForm):
     class Meta:
         model = Indicator
-        fields = ['description', 'weigh', 'scale']  
+        fields = ['description','dimensions', 'weigh', 'scale']  
         widgets={
             'description':forms.Textarea(attrs={'class':'form-control'}),
             'weigh': forms.NumberInput(attrs={'class':'form-control'}),
+            'dimensions':forms.SelectMultiple(attrs={'class':'form-control'}),
         }
 
 # formulario para Dimension
 class DimensionForm(forms.ModelForm):
     class Meta:
         model = Dimension
-        fields = ['description', 'indicators','weigh', 'scale']
+        fields = ['description', 'variables','weigh', 'scale']
+        labels={
+            'description':'Descripcion',
+            'variables':'Variables a la s que pertenece la Dimension',
+            'weigh':'Peso'
+        }
         widgets={
             'description':forms.Textarea(attrs={'class':'form-control'}),
             'weigh': forms.NumberInput(attrs={'class':'form-control'}),
-            'indicators':forms.Select(attrs={'class':'form-control'}),
+            'variables':forms.SelectMultiple(attrs={'class':'form-control'}),
         }
+        
+# formulario para Variable
+class VariableForm(forms.ModelForm):
+    class Meta:
+        model = Variable
+        fields = ['description','name', 'scale'] 
+        widgets={
+            'description':forms.Textarea(attrs={'class':'form-control'}),
+            'name':forms.TextInput(attrs={'class':'form-control'}),
+        }
+
 
 # formulario para Scale
 class ScaleForm(forms.ModelForm):

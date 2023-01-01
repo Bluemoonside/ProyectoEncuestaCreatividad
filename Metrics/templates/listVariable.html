@@ -4,7 +4,7 @@
     
     <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
            <h1>
-            Listado de Indicadores.
+            Listado de Variables.
            </h1> 
            <div class="table-responsive py-4">
             <table class="table table-striped">
@@ -12,8 +12,7 @@
                    <tr>
                     <th>#</th>
                     <th>Descripcion</th>
-                    <th>Peso</th>
-                    <th>Dimensiones a las que perstenece</th>
+                    <th>Nombre</th>
                     <th colspan="2">Opciones</th>
                    </tr>
                </thead>   
@@ -23,14 +22,13 @@
                     <tr>
                        <td>{{c.pk}}</td>
                        <td>{{c.description}}</td>
-                       <td>{{c.weigh}}</td>
-                       <td>{{c.dimensions}}</td>
+                       <td>{{c.name}}</td>
                        <td><a href="update/{{c.pk}}"class="btn btn-info" >Editar</a></td>
                        <td><a href="delete/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
                     </tr>
                    {% endfor %}
                    {% else %}
-                   <h1>No hay Indicadores.</h1>
+                   <h1>No hay Variables.</h1>
                     {% endif %}
                 </tbody>
             </table>
@@ -38,6 +36,7 @@
     </div>
 </div>
 <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-    <a href="created/"class="btn btn-success">Crear Nuevo Criterio</a>
+    <a href="created/"class="btn btn-success">Crear Nueva Variable.</a>
+    <a class="btn btn-primary" href="/">Regresar</a>
 </div>
 {% endblock %}
