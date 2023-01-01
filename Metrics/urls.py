@@ -32,6 +32,21 @@ urlpatterns = [
       path('measurementcriterions/created/dimensions/', Dimensions  ),
       path('measurementcriterions/update/dimensions/', Dimensions  ),
       path('measurementcriterions/delete/dimensions/', Dimensions  ), 
+      
+      path('variables/variables/',Variables),
+      path('indicators/variables/', Variables),
+      path('indicators/created/variables/', Variables ),
+      path('indicators/update/variables/', Variables ),
+      path('indicators/delete/variables/', Variables ),
+      path('measurementcriterions/variables/', Variables),
+      path('measurementcriterions/created/variables/', Variables ),
+      path('measurementcriterions/update/variables/', Variables ),
+      path('measurementcriterions/delete/variables/', Variables ), 
+      path('dimensions/variables/', Variables),
+      path('dimensions/update/variables/', Variables ),
+      path('dimensions/created/variables/', Variables ),
+      path('dimensions/delete/variables/', Variables ),
+
      
      # URL para MeasurementCriterion
       path('measurementcriterions/', MeasurementCriterionListView.as_view(),name='listar_criterio'  ),
@@ -50,6 +65,12 @@ urlpatterns = [
       path('dimensions/created/', DimensionCreateView.as_view() ),
       path('dimensions/update/<pk>', DimensionUpdateView.as_view() ),
       path('dimensions/delete/<pk>', DimensionDeleteView.as_view() ),
+      
+        # URL para Variable
+      path('variables/', VariableListView.as_view(),name='listar_variable'  ),
+      path('variables/created/', VariableCreateView.as_view() ),
+      path('variables/update/<pk>', VariableUpdateView.as_view() ),
+      path('variables/delete/<pk>', VariableDeleteView.as_view() ),
       
       #URls para Scala
       path('scale/list/', ScaleListView.as_view(),name='listar_scale'  ),
