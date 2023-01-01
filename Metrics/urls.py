@@ -1,5 +1,9 @@
 from django.urls import path, include
-from .views import *
+from .MeasurementCriterionViews import *
+from .DimensionViews import *
+from .IndicatorView import *
+from .VariableViews import *
+from .ScaleViews import *
 
 urlpatterns = [
       #URL para hacer funcionar el narbar
