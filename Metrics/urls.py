@@ -1,9 +1,24 @@
 from django.urls import path, include
-from .MeasurementCriterionViews import *
-from .DimensionViews import *
-from .IndicatorView import *
-from .VariableViews import *
-from .ScaleViews import *
+from .Views.DimensionViews.DimensionDeleteView import *
+from .Views.DimensionViews.DimensionListView import *
+from .Views.DimensionViews.DimensionUpdateView import *
+from .Views.DimensionViews.DimensionCreateViews import *
+from .Views.IndicatorsViews.IndicatorCreateView import *
+from .Views.IndicatorsViews.IndicatorDeleteView import *
+from .Views.IndicatorsViews.IndicatorListView import *
+from .Views.IndicatorsViews.IndicatorUpdateView import *
+from .Views.MeasurementCriterionViews.MeasurementCriterionCreateView import *
+from .Views.MeasurementCriterionViews.MeasurementCriterionDeleteView import *
+from .Views.MeasurementCriterionViews.MeasurementCriterionListViews import *
+from .Views.MeasurementCriterionViews.MeasurementCriterionUpdateView import *
+from .Views.ScaleViews.ScaleCreateView import *
+from .Views.ScaleViews.ScaleDeleteView import *
+from .Views.ScaleViews.ScaleListView import *
+from .Views.ScaleViews.ScaleUpdateView import *
+from .Views.VariableViews.VariableCreateView import *
+from .Views.VariableViews.VariableDeleteView import *
+from .Views.VariableViews.VariableListView import *
+from .Views.VariableViews.VariableUpdateView import *
 
 urlpatterns = [
       #URL para hacer funcionar el narbar
