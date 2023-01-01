@@ -10,10 +10,10 @@
            <div class="card-body">
             <form method="POST">{% csrf_token %}
                 {{ form.as_p }}
-            <a class="btn btn-info" href="/poll/createquestion/">A&ntilde;adir Pregunta</a>
-            <a class="btn btn-info" href="/poll/questionlist/">Lista de Preguntas</a>
+                <a class="btn btn-info" href="/poll/create/question/">A&ntilde;adir Pregunta</a>
+                <a class="btn btn-info" href="/poll/question/list/">Lista de Preguntas</a>
             <input type="submit" class="btn btn-success" value="Guardar">
-            <a class="btn btn-dark" href="/poll/polllist/">No, Gracias</a>
+            <a class="btn btn-dark" href="/poll/list/">No, Gracias</a>
             </form>
           </div>   
         </div>        
