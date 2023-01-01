@@ -22,7 +22,7 @@ class MeasurementCriterionCreateView(CreateView):
     model =models.MeasurementCriterion
     form_class =forms.MeasurementCriterionForm
     template_name = "createdMeasurementCriterion.html"
-    success_url= reverse_lazy('listar_criterio')
+    success_url= reverse_lazy('listar_criterio') 
     
 # creacion de la vista generica para editar MeasurementCriterion
 class MeasurementCriterionUpdateView(UpdateView):
@@ -61,8 +61,32 @@ class IndicatorDeleteView(DeleteView):
     model = models.Indicator
     template_name = "deleteIndicator.html"
     success_url= reverse_lazy('listar_indicator')
+
+# creacion de la vista generica para listar Scale
+class ScaleListView(ListView):
+    model =models.Scale
+    template_name = "listScale.html"
+
+# creacion de la vista generica para crear Scale
+class ScaleCreateView(CreateView):
+    model =models.Scale
+    form_class =forms.ScaleForm
+    template_name = "createdScale.html"
+    success_url= reverse_lazy('listar_scale')
     
-#--------------------------------------------------------------------------------------------
+# creacion de la vista generica para editar Scale
+class ScaleUpdateView(UpdateView):
+    model = models.Scale
+    form_class =forms.ScaleForm
+    template_name = "updateScale.html"
+    success_url= reverse_lazy('listar_scale')
+
+# creacion de la vista generica para eliminar Scale
+class ScaleDeleteView(DeleteView):
+    model = models.Scale
+    template_name = "deleteScale.html"
+    success_url= reverse_lazy('listar_scale')
+    
 # creacion de la vista generica para listar Dimension
 class DimensionListView(ListView):
     model =models.Dimension
