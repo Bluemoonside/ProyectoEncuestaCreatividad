@@ -28,6 +28,11 @@ class DimensionForm(forms.ModelForm):
     class Meta:
         model = Dimension
         fields = ['description', 'variables','weigh', 'scale']
+        labels={
+            'description':'Descripcion',
+            'variables':'Variables a la s que pertenece la Dimension',
+            'weigh':'Peso'
+        }
         widgets={
             'description':forms.Textarea(attrs={'class':'form-control'}),
             'weigh': forms.NumberInput(attrs={'class':'form-control'}),
