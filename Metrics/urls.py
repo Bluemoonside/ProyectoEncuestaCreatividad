@@ -104,8 +104,8 @@ urlpatterns = [
       path('variables/delete/<pk>', VariableDeleteView.as_view() ),
       
       #URls para Scala
-      path('scale/list/', ScaleListView.as_view(),name='listar_scale'  ),
-      path('scale/list/scale/create/', ScaleCreateView.as_view() ),
-      path('scale/list/scale/update/<pk>', ScaleUpdateView.as_view() ),
-      path('scale/list/scale/delete/<pk>', ScaleDeleteView.as_view() ),
+      path('scales/', ScaleListView.as_view(),name='listar_scale'  ),
+      path('scales/create/', ScaleCreateView.as_view() ),
+      path('scales/update/<pk>', ScaleUpdateView.as_view() ),
+      path('scales/delete/<pk>', ScaleDeleteView.as_view() ),
 ]
