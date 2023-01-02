@@ -15,4 +15,4 @@ class Question(models.Model):
     measurement_criterion = models.ForeignKey(MeasurementCriterion, on_delete=models.CASCADE, null=True)
     
     def __str__(self):
-        return f"Pregunta({self.id}): {self.tittle}"
+        return f"Pregunta({self.id}): {self.tittle}" 

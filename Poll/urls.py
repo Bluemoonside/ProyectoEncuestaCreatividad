@@ -7,7 +7,7 @@ urlpatterns = [
     path('create/poll/', PollCreate.as_view(), name='createpoll'),
     path('create/question/', QuestionCreate.as_view(), name='createquestion'),
     path('list/update/poll/<pk>', PollUpdate.as_view(), name='updatepoll'),
-    path('list/update/question/<pk>', QuestionUpdate.as_view(), name='updatequestion'),
     path('list/delete/poll/<pk>', PollDelete.as_view(), name='deletepoll'),
-    path('list/delete/question/<pk>', QuestionDelete.as_view(), name='deletequestion'),
+    path('question/list/update/question/<pk>', QuestionUpdate.as_view(), name='updatequestion'),
+    path('question/list/delete/question/<pk>', QuestionDelete.as_view(), name='deletequestion'),
 ]    

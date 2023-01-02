@@ -75,7 +75,7 @@ urlpatterns = [
       path('measurementcriterions/delete/variables/', Variables ), 
       path('dimensions/variables/', Variables),
       path('dimensions/update/variables/', Variables ),
-      path('dimensions/created/variables/', Variables ),
+      path('dimensions/created/variables/', Variables ), 
       path('dimensions/delete/variables/', Variables ),
 
      

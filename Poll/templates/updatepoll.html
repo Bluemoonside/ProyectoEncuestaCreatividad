@@ -1,0 +1,22 @@
+{% extends "./pollbase.html" %}
+
+{% block tittle %} Editar Encuesta {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-xl-6 col-sm-6">
+         <h2>Editar Encuesta</h2> 
+         <div class="card">
+           <div class="card-body">
+            <form method="POST">{% csrf_token %}
+                {{ form.as_p }}
+            <a class="btn btn-info" href="/poll/create/question/">A&ntilde;adir Pregunta</a>
+            <a class="btn btn-info" href="/poll/question/list/">Lista de Preguntas</a>
+            <input type="submit" class="btn btn-success" value="Guardar">
+            <a class="btn btn-dark" href="/poll/list/">No, Gracias</a>
+            </form>
+          </div>   
+        </div>        
+      </div>
+      <h5>Pulse ctrl para seleccionar m&aacute; de una pregunta</h5>
+{% endblock  %}

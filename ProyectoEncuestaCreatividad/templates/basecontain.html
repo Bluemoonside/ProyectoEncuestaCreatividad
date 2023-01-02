@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="{% static '/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <!-- Styles -->
+    <link href="{% static '/css/gestion.css' %}" rel="stylesheet" />
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+
+  <body>
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-lower">Aprendisaje Creativo</span>
+    </h1>
+
+    <!-- Navbar -->
+    {% block navbar %} {% endblock %} 
+
+    <!-- Changing contend-->
+    {% block contend %} {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+          <a href="#" class="link">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="#" class="link">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="#" class="link">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </p>
+        <p class="m-0 mbt">
+          <a href="sample.html" class="link">Política de privacidad</a> ·
+          <a href="sample.html" class="link">Aviso legal</a> ·
+          <a href="sample.html" class="link">Cookies</a>
+        </p>
+        <p class="m-0 mbt1">&copy; Universidad de Matanzas Camilo Cienfuegos</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="{% static '/bootstrap/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
