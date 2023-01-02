@@ -1,9 +1,28 @@
-{% extends "./base.html" %}
-{% block body %}
-<form method="post"> {% csrf_token %}
-    <h1>Esta seguro que desea eliminar la Variable ( {{object.description}})</h1>
-    <button class="btn btn-danger" type="submit">Eliminar</button>
-    <a href="{% url 'listar_criterio' %}" class="btn btn-success">Cancelar</a>
-</form>
-
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang=es>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Criterio de Medida</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    </head>
+    <body stylesheet="bg-$blue">
+          <div class="container py-5">
+            <form method="post"> {% csrf_token %}
+                <h1>Esta seguro que desea eliminar la Variable ( {{object.description}})</h1>
+                <button class="btn btn-danger" type="submit">Eliminar</button>
+                <a href="{% url 'listar_criterio' %}" class="btn btn-success">Cancelar</a>
+            </form>
+          </div>
+        <script src="" async defer></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </body>
+</html>
