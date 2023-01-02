@@ -43,8 +43,8 @@
                                    <td>{{c.max_value}}</td>
                                    <td>{{c.min_value}}</td>
                                    <td>{{c.interval}}</td>
-                                   <td><a href="scale/update/{{c.pk}}"class="btn btn-info" >Editar</a></td>
-                                   <td><a href="scale/delete/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
+                                   <td><a href="update/{{c.pk}}"class="btn btn-info" >Editar</a></td>
+                                   <td><a href="delete/{{c.pk}}"class="btn btn-danger">Eliminar</a></td>
                                 </tr>
                                {% endfor %}
                                {% else %}
@@ -56,7 +56,9 @@
                 </div>
             </div>
             <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                <a href="scale/create/"class="btn btn-success">Crear Nueva Escala</a>
+                <a href="create/"class="btn btn-success text-dark">Crear Nueva Escala</a>
+                <a href="/metrics/measurementcriterions/"class="btn btn-primary text-dark">Anterior</a>
+                <a href="/"class="btn btn-info text-dark">Pagina Principal</a>
             </div>
           </div>
         <script src="" async defer></script>
