@@ -26,6 +26,7 @@
                         <table class="table table-striped">
                            <thead>
                                <tr>
+                                <th>#</th>
                                 <th>Descripcion</th>
                                 <th>Nombre</th>
                                 <th>Valor M&aacute;ximo</th>
@@ -38,6 +39,7 @@
                                 {% if object_list %}
                                 {% for c in object_list %}
                                 <tr>
+                                   <td>{{c.pk}}</td>
                                    <td>{{c.description}}</td>
                                    <td>{{c.name}}</td>
                                    <td>{{c.max_value}}</td>
