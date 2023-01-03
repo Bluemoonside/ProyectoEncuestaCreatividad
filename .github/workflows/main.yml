@@ -1,27 +1,18 @@
-name: Heroku Django Deploy
-uses: nyakaz73/heroku-django-deploy@v0.81
-
-  with:
-    # Heroku app name
-    heroku_app_name: creativity
-    # Heroku api key
-    heroku_api_key: asjfjalsdfjla;jsdl5a4s5f64
-    # Heroku email address
-    heroku_email_address: yosbel.penate@gmail.com
-    # Want to just login
-    want_to_just_login: # optional
-    # Deploy using git
-    use_git: # optional
-    # Deploy using docker Container registry
-    use_docker: # optional
-    # Deploy using heroku Build Manifest
-    use_build_manifest: # optional
-    # Disable collect static on pushing
-    disable_collect_static: # optional
-    # Force push to heroku if there are conflicts or git fast forwards issues
-    force_push: # optional
-    # The directory for the commands to execute in
-    working-directory: # optional, default is ./
-    # This is the default git branch you want to push from eg main or master
-    git_branch: master
-
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
