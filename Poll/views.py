@@ -18,7 +18,7 @@ class PollCreate(CreateView):
 class PollUpdate(UpdateView):
     model = Poll
     form_class = PollForm
-    template_name = 'createpoll.html'
+    template_name = 'updatepoll.html'
     success_url = reverse_lazy('polllist')
 
 class PollDelete(DeleteView):
@@ -39,8 +39,8 @@ class QuestionCreate(CreateView):
 class QuestionUpdate(UpdateView):
     model = Question
     form_class = QuestionForm
-    template_name = 'createquestion.html'
-    success_url = reverse_lazy('createpoll')
+    template_name = 'updatequestion.html'
+    success_url = reverse_lazy('questionlist')
 
 class QuestionDelete(DeleteView):
     model = Question
