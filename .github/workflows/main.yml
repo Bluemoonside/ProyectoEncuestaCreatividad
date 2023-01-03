@@ -1,2 +1,27 @@
 - name: Heroku Django Deploy
+  # You may pin to the exact commit or the version.
+  # uses: nyakaz73/heroku-django-deploy@1a0bce1d14e7185e5a514dc55dcaf632b0288014
   uses: nyakaz73/heroku-django-deploy@v0.81
+  with:
+    # Heroku app name
+    heroku_app_name: creativity
+    # Heroku api key
+    heroku_api_key: asjfjalsdfjla;jsdl5a4s5f64
+    # Heroku email address
+    heroku_email_address: yosbel.penate@gmail.com
+    # Want to just login
+    want_to_just_login: # optional
+    # Deploy using git
+    use_git: # optional
+    # Deploy using docker Container registry
+    use_docker: # optional
+    # Deploy using heroku Build Manifest
+    use_build_manifest: # optional
+    # Disable collect static on pushing
+    disable_collect_static: # optional
+    # Force push to heroku if there are conflicts or git fast forwards issues
+    force_push: # optional
+    # The directory for the commands to execute in
+    working-directory: # optional, default is ./
+    # This is the default git branch you want to push from eg main or master
+    git_branch: master
