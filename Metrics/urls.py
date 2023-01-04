@@ -81,7 +81,7 @@ urlpatterns = [
      
      # URL para MeasurementCriterion
       path('measurementcriterions/', MeasurementCriterionListView.as_view(),name='listar_criterio'  ),
-      path('measurementcriterions/created/', MeasurementCriterionCreateView.as_view() ),
+      path('measurementcriterions/created/', MeasurementCriterionCreateView.as_view(), name='crear_criterio'),
       path('measurementcriterions/update/<pk>', MeasurementCriterionUpdateView.as_view() ),
       path('measurementcriterions/delete/<pk>', MeasurementCriterionDeleteView.as_view() ),
       

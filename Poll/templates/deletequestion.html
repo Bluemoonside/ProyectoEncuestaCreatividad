@@ -1,6 +1,6 @@
 {% extends "./pollbase.html" %}
-
-{% block tittle %} Eliminar Pregunta {% endblock %}
+{% load static %}
+{% block title %} Eliminar Pregunta {% endblock %}
 
 {% block body %}
 <form method="POST">{% csrf_token %}

@@ -1,6 +1,6 @@
 {% extends "./pollbase.html" %}
-
-{% block tittle %} Crear Pregunta {% endblock %}
+{% load static %}
+{% block title %} Crear Pregunta {% endblock %}
 
 {% block body %}
 <div class="row">
@@ -11,6 +11,7 @@
             <form method="POST">{% csrf_token %}
                 {{ form.as_p }}
             <input type="submit" class="btn btn-success" value="Guardar">
+            <a class="btn btn-info" href="{% url 'crear_criterio' %}">Crear Criterio de Medida</a>
             <a class="btn btn-dark" href="/poll/create/poll/">No, Gracias</a>
             </form>
            </div>   
