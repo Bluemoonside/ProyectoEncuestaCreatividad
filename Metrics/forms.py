@@ -6,6 +6,13 @@ class MeasurementCriterionForm(forms.ModelForm):
     class Meta:
         model = MeasurementCriterion
         fields = ['description','value','indicator']
+        
+        labels={
+            'description':'Descripción',
+            'indicator':'Indicador al que pertenece',
+            'value':'Valor'
+        }
+        
         widgets={
             'description':forms.Textarea(attrs={'class':'form-control'}),
             'value': forms.NumberInput(attrs={'class':'form-control'}),
@@ -17,6 +24,11 @@ class IndicatorForm(forms.ModelForm):
     class Meta:
         model = Indicator
         fields = ['description','dimensions', 'weigh', 'scale']  
+        labels={
+            'description':'Descripción',
+            'dimensions':'Dimensión a la que pertenece',
+            'weigh':'Peso'
+        }
         widgets={
             'description':forms.Textarea(attrs={'class':'form-control'}),
             'weigh': forms.NumberInput(attrs={'class':'form-control'}),
@@ -29,8 +41,8 @@ class DimensionForm(forms.ModelForm):
         model = Dimension
         fields = ['description', 'variables','weigh', 'scale']
         labels={
-            'description':'Descripcion',
-            'variables':'Variables a la s que pertenece la Dimension',
+            'description':'Descripción',
+            'variables':'Variables a la s que pertenece',
             'weigh':'Peso'
         }
         widgets={
@@ -43,7 +55,11 @@ class DimensionForm(forms.ModelForm):
 class VariableForm(forms.ModelForm):
     class Meta:
         model = Variable
-        fields = ['description','name', 'scale'] 
+        fields = ['description','name', 'scale']
+        labels={
+            'description':'Descripción',
+            'name':'Nombre'
+        } 
         widgets={
             'description':forms.Textarea(attrs={'class':'form-control'}),
             'name':forms.TextInput(attrs={'class':'form-control'}),

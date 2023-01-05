@@ -9,4 +9,4 @@ class IndicatorCreateView(CreateView):
     model =models.Indicator
     form_class =forms.IndicatorForm
     template_name = "createdIndicator.html"
-    success_url= reverse_lazy('listar_indicator')
+    success_url= reverse_lazy('listar_criterio')
