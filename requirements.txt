@@ -4,9 +4,13 @@ colorama==0.4.6
 Django==4.1.4
 django-reset-migrations==0.4.0
 exceptiongroup==1.1.0
+flake8==6.0.0
 iniconfig==1.1.1
+mccabe==0.7.0
 packaging==22.0
 pluggy==1.0.0
+pycodestyle==2.10.0
+pyflakes==3.0.1
 pytest==7.2.0
 pytest-django==4.5.2
 sqlparse==0.4.3
