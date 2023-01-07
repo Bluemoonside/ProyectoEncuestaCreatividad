@@ -36,5 +36,6 @@ ignore =
     F403,
     B007,
     B950,
+    W191,
 
 max-line-length = 200
