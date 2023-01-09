@@ -19,11 +19,11 @@ class ScaleForm(forms.ModelForm):
 			'max_value': 'Valor Máximo',
 			'min_value': 'Valor Mínimo',
 			'interval': 'Intervalo',
-		} 
+		}
 		widgets = {
 			'description': forms.TextInput(attrs={'class':'form-control'}),
 			'name': forms.TextInput(attrs={'class':'form-control'}),
 			'max_value': forms.NumberInput(),
 			'min_value': forms.NumberInput(),
-			'interval': forms.NumberInput(),    
+			'interval': forms.NumberInput(),
 		}
