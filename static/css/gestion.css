@@ -277,3 +277,16 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+.form-contend{
+  background-color: rgba(44, 44, 248, 0.71);
+  width: 40%;
+  margin: 20px auto;
+  color: cornsilk;
+  border-radius: 10px;
+  padding: 10px 70px;
+}
+
+.imput-style{
+  width:305px;
+}

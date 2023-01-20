@@ -6,7 +6,7 @@ class Indicator(models.Model):
     description = models.CharField(max_length=200)
     weigh = models.IntegerField(default=0)
     dimensions = models.ManyToManyField(Dimension)
-    scale = models.OneToOneField(Scale, on_delete=models.CASCADE, parent_link=True, null=True)
+    scale = models.OneToOneField(Scale, on_delete=models.CASCADE)
     
     def __str__(self):
         return f"Indicador({self.id}): {self.description}"

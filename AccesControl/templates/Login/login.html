@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link href="{% static '/css/gestion.css' %}" rel="stylesheet" />
+    <title>Iniciar Secci&oacute;n</title>
+  </head>
+  <body>
+    <section class="page-section clearfix">
+      <div class="container">
+          <div class="form-contend">
+            <h4>Bienvenido</h4>
+            <form method="POST"> {% csrf_token %}
+              <table>
+              {{form.as_table}}
+              </table>
+              <div><p></p></div>
+              <button class="btn btn-light" type="submit">Iniciar Seci&oacute;n</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap -->
+    <script src="{% static '/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  </body>
+</html>

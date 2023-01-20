@@ -15,12 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import home
+from django.conf.urls import handler404, handler500, handler403
+from AccesControl.views import Error403, Error404, Error500
+from .views import Home
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', Home.as_view(), name='home'),
+    path('accounts/', include('AccesControl.urls'), name='accounts'),
     path('admin/', admin.site.urls),
     path('models/', include('Models.urls')),
     path('metrics/', include('Metrics.urls')),
     path('poll/', include('Poll.urls')),
 ]
+
+handler404 = Error404.as_view()
+handler403 = Error403.as_view()
+handler500 = Error500.as_error_view()

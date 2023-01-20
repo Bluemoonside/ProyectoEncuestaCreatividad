@@ -18,7 +18,9 @@ from .Views.ScaleViews.ScaleUpdateView import *
 from .Views.VariableViews.VariableCreateView import *
 from .Views.VariableViews.VariableDeleteView import *
 from .Views.VariableViews.VariableListView import *
-from .Views.VariableViews.VariableUpdateView import *
+from .Views.VariableViews.VariableUpdateView import VariableUpdateView
+from django.conf.urls import handler404, handler500, handler403
+from AccesControl.views import Error403, Error404, Error500
 
 urlpatterns = [
       #URL para hacer funcionar el narbar
@@ -109,3 +111,7 @@ urlpatterns = [
       path('scales/update/<pk>', ScaleUpdateView.as_view() ),
       path('scales/delete/<pk>', ScaleDeleteView.as_view() ),
 ]
+
+handler404 = Error404.as_view()
+handler403 = Error403.as_view()
+handler500 = Error500.as_error_view()

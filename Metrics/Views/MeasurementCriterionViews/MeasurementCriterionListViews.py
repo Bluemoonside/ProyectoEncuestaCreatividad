@@ -1,5 +1,5 @@
-from django.shortcuts import render,redirect
-from django.urls import reverse_lazy
+from django.shortcuts import redirect
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.views.generic import ListView
 from Models import models 
 
@@ -7,9 +7,11 @@ from Models import models
 def MeasurementCriterions(request):
     return redirect('/metrics/measurementcriterions/')
 
-class MeasurementCriterionListView(ListView):
+class MeasurementCriterionListView(LoginRequiredMixin,PermissionRequiredMixin,ListView):
     model =models.MeasurementCriterion
     template_name = "listMeasurementCriterion.html"
+    permission_required = 'Models.view_measurementcriterion'
+    permission_denied_message = 'Usuario No Autorizado'
 
 
 
